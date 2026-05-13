@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor Mode | Newsletter.mn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">Newsletter.mn</div>
+        <nav class="menu">
+            <span>Олон улс</span>
+            <span>Улс төр</span>
+            <span>Бизнес</span>
+            <span>Нийгэм</span>
+            <span>Бусад</span>
+        </nav>
+        <div class="nav-right">
+            <input type="text" placeholder="Хайх...">
+            <img src="https://via.placeholder.com/35" class="profile-pic">
+        </div>
+    </header>
+
+    <div class="editor-layout">
+        <!-- Main Content Area (Left) -->
+        <main class="content-area">
+            <div class="image-upload-box">
+                <img src="image-icon.png" alt="Upload Image">
+            </div>
+            
+            <h1 class="editable-title" contenteditable="true">Гарчиг ✎</h1>
+            
+            <div class="author-info">
+                <img src="https://via.placeholder.com/30" class="author-thumb">
+                <p>By: Gloria Borger, Newsletter.mn <br> 
+                   <small>2024.09.22 | 1,272,921 read | 12min read</small>
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="text-editor" contenteditable="true">
+                Эндээс бичиж эхлэнэ үү...
+            </div>
+        </main>
+
+        <!-- Sidebar Area (Right) -->
+        <aside class="sidebar">
+            <!-- Publishing Controls -->
+            <section class="sidebar-box active-border">
+                <h3>Status & Visibility</h3>
+                <div class="row">
+                    <span>Visibility</span>
+                    <button class="dropdown">Public</button>
+                </div>
+                
+                <h3>Categories</h3>
+                <div class="category-grid">
+                    <button>Category 1</button>
+                    <button>Category 2</button>
+                    <button>Category 3</button>
+                    <button>Category 4</button>
+                    <!-- Add more as needed -->
+                </div>
+
+                <div class="sources-input">
+                    <h3>Sources</h3>
+                    <textarea placeholder="Upload sources..."></textarea>
+                </div>
+
+                <button class="btn-publish">Publish</button>
+                <button class="btn-draft">Save as Draft</button>
+            </section>
+
+            <!-- Coverage Stats -->
+            <section class="sidebar-box">
+                <h3>Coverage Details</h3>
+                <ul class="stats-list">
+                    <li>Мэдээлэл бүхий сувгууд: <span>16</span></li>
+                    <li>АН талтай: <span>3</span></li>
+                    <li>МАН талтай: <span>7</span></li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+</body>
+</html>
