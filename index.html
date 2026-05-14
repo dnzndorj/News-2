@@ -3,89 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editor Mode | Newsletter.mn</title>
+    <title>Newsletter.mn</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Font: Montserrat Alternates -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Top Navigation Bar -->
-    <header class="navbar">
+    <!-- Header Navigation -->
+    <header>
         <div class="logo">Newsletter.mn</div>
-        <nav class="menu">
-            <span>Олон улс</span>
-            <span>Улс төр</span>
-            <span>Бизнес</span>
-            <span>Нийгэм</span>
-            <span>Бусад</span>
+        <nav>
+            <a href="#">Олон улс</a>
+            <a href="#">Улс төр</a>
+            <a href="#">Бизнес</a>
+            <a href="#">Нийгэм</a>
+            <a href="#">Бусад</a>
         </nav>
-        <div class="nav-right">
-            <input type="text" placeholder="Хайх...">
-            <img src="https://via.placeholder.com/35" class="profile-pic">
+        <div class="header-right">
+            <div class="search-bar">
+                <input type="text" placeholder="Хайх...">
+                <button>🔍</button>
+            </div>
+            <div class="profile-pic">
+                <img src="https://via.placeholder.com/40" alt="Profile">
+            </div>
         </div>
     </header>
 
-    <div class="editor-layout">
-        <!-- Main Content Area (Left) -->
-        <main class="content-area">
-            <div class="image-upload-box">
-                <img src="image-icon.png" alt="Upload Image">
+    <main>
+        <!-- Section 1: Today's News -->
+        <section class="news-section">
+            <h2 class="section-title"><span class="highlight">Өнөөдрийн мэдээ</span></h2>
+            <div class="grid-today" id="today-news-container">
+                <!-- JS will populate cards here -->
             </div>
-            
-            <h1 class="editable-title" contenteditable="true">Гарчиг ✎</h1>
-            
-            <div class="author-info">
-                <img src="https://via.placeholder.com/30" class="author-thumb">
-                <p>By: Gloria Borger, Newsletter.mn <br> 
-                   <small>2024.09.22 | 1,272,921 read | 12min read</small>
-                </p>
+        </section>
+
+        <!-- Section 2: Featured News -->
+        <section class="news-section">
+            <h2 class="section-title"><span class="highlight">Онцлох мэдээ</span></h2>
+            <div class="grid-featured-top" id="featured-top-container"></div>
+            <div class="grid-4-cols" id="featured-bottom-container"></div>
+        </section>
+
+        <!-- Section 3: Latest News -->
+        <section class="news-section">
+            <h2 class="section-title"><span class="highlight">Шинэхэн мэдээ</span></h2>
+            <div class="grid-featured-top" id="latest-top-container"></div>
+            <div class="grid-4-cols" id="latest-bottom-container"></div>
+        </section>
+
+        <!-- Section 4: Saved News -->
+        <section class="news-section">
+            <h2 class="section-title"><span class="highlight">Хадгалсан мэдээ</span></h2>
+            <div class="grid-4-cols" id="saved-news-container"></div>
+        </section>
+
+        <!-- Scroll to Top -->
+        <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+            <h2><span class="highlight">︽<br>Хамгийн дээд хэсэг рүү буцах</span></h2>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-columns">
+            <div class="col">
+                <h3>Newsletter.mn</h3>
+                <p>Бидний тухай</p>
+                <p>Сурталчилгаа байрлуулах</p>
+                <br>
+                <h3>Холбоо барих</h3>
+                <p>+976 9999 0000</p>
+                <p>newsletter@newsletter.mn</p>
             </div>
-
-            <hr>
-
-            <div class="text-editor" contenteditable="true">
-                Эндээс бичиж эхлэнэ үү...
+            <div class="col">
+                <h3>Бусад медиа</h3>
+                <p>Facebook.com/newslettermn</p>
+                <p>Instagram.com/newslettermn</p>
+                <p>X.com/newslettermn</p>
+                <p>youtube.com/newslettermn</p>
             </div>
-        </main>
+            <div class="col">
+                <h3>Something</h3>
+                <p>Something</p>
+                <p>Other thing</p>
+                <p>the other thing</p>
+                <p>Anything haha</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.</p>
+            <p>CNN Sans ™ & © 2026 Cable News Network.</p>
+        </div>
+    </footer>
 
-        <!-- Sidebar Area (Right) -->
-        <aside class="sidebar">
-            <!-- Publishing Controls -->
-            <section class="sidebar-box active-border">
-                <h3>Status & Visibility</h3>
-                <div class="row">
-                    <span>Visibility</span>
-                    <button class="dropdown">Public</button>
-                </div>
-                
-                <h3>Categories</h3>
-                <div class="category-grid">
-                    <button>Category 1</button>
-                    <button>Category 2</button>
-                    <button>Category 3</button>
-                    <button>Category 4</button>
-                    <!-- Add more as needed -->
-                </div>
-
-                <div class="sources-input">
-                    <h3>Sources</h3>
-                    <textarea placeholder="Upload sources..."></textarea>
-                </div>
-
-                <button class="btn-publish">Publish</button>
-                <button class="btn-draft">Save as Draft</button>
-            </section>
-
-            <!-- Coverage Stats -->
-            <section class="sidebar-box">
-                <h3>Coverage Details</h3>
-                <ul class="stats-list">
-                    <li>Мэдээлэл бүхий сувгууд: <span>16</span></li>
-                    <li>АН талтай: <span>3</span></li>
-                    <li>МАН талтай: <span>7</span></li>
-                </ul>
-            </section>
-        </aside>
-    </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
