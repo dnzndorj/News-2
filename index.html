@@ -3,89 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editor Mode | Newsletter.mn</title>
+    <title>Editor's Mode | Newsletter.mn</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="mode-bar">Editor's mode</div>
 
-    <!-- Top Navigation Bar -->
-    <header class="navbar">
-        <div class="logo">Newsletter.mn</div>
-        <nav class="menu">
-            <span>Олон улс</span>
-            <span>Улс төр</span>
-            <span>Бизнес</span>
-            <span>Нийгэм</span>
-            <span>Бусад</span>
-        </nav>
-        <div class="nav-right">
-            <input type="text" placeholder="Хайх...">
-            <img src="https://via.placeholder.com/35" class="profile-pic">
+    <div class="page">
+        <header class="site-header">
+            <a class="logo" href="#">newsletter.mn</a>
+
+            <nav class="site-nav" aria-label="Primary navigation"></nav>
+
+            <div class="header-tools">
+                <label class="search">
+                    <input type="search" placeholder="хайх..">
+                    <span class="search-icon" aria-hidden="true"></span>
+                </label>
+                <span class="avatar small-avatar" aria-label="User avatar"></span>
+            </div>
+        </header>
+
+        <div class="editor-layout">
+            <main class="article-editor">
+                <section class="hero-upload" aria-label="Article image upload">
+                    <div class="picture-icon" aria-hidden="true">
+                        <span></span>
+                    </div>
+                    <button class="corner-lock" aria-label="Image status"></button>
+                </section>
+
+                <div class="caption">The caption property</div>
+
+                <div class="title-editor">
+                    <input id="article-title" type="text" value="Гарчиг" aria-label="Article title">
+                    <button class="pencil-button" type="button" aria-label="Edit title" onclick="document.getElementById('article-title').focus()">
+                        <span class="pencil" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+                <div class="author-avatar">
+                    <span class="avatar"></span>
+                </div>
+
+                <p class="byline">By: Gloria Borger, Newsletter.mn</p>
+                <p class="metadata">2024.09.22&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;1,272,921 read&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;12min read</p>
+
+                <div class="article-rule"></div>
+
+                <div class="body-editor" contenteditable="true">Эндээс бичиж эхлэнэ үү...</div>
+            </main>
+
+            <aside class="editor-sidebar" aria-label="Editor sidebar">
+                <section class="publish-panel">
+                    <div class="panel-row title-row">
+                        <h2>Status &amp; Visibility</h2>
+                        <button class="chevron" aria-label="Collapse status panel"></button>
+                    </div>
+
+                    <div class="panel-row visibility-row">
+                        <span>Visibility</span>
+                        <select class="visibility-select" aria-label="Visibility">
+                            <option selected>Public</option>
+                            <option>Private</option>
+                        </select>
+                    </div>
+
+                    <div class="panel-row category-head">
+                        <h2>Categories</h2>
+                        <button class="chevron" aria-label="Collapse categories"></button>
+                    </div>
+
+                    <div class="thin-line"></div>
+
+                    <div class="category-grid" aria-label="Categories">
+                        <button>Category 1</button>
+                        <button>Category 2</button>
+                        <button>Category 3</button>
+                        <button>Category 4</button>
+                        <button>Category 5</button>
+                        <button>Category 6</button>
+                        <button>Category 7</button>
+                        <button>Category 8</button>
+                        <button>Category 1</button>
+                        <button>Category 2</button>
+                        <button>Category 1</button>
+                        <button>Category 2</button>
+                        <button>Category 1</button>
+                        <button>Category 2</button>
+                        <button>Category 1</button>
+                        <button>Category 2</button>
+                        <button>Category 1</button>
+                        <button>Category 2</button>
+                        <button>Category 1</button>
+                        <button>Category 2</button>
+                    </div>
+
+                    <div class="panel-row sources-head">
+                        <h2>Sources</h2>
+                        <button class="chevron" aria-label="Collapse sources"></button>
+                    </div>
+
+                    <textarea class="sources" placeholder="Upload sources..."></textarea>
+
+                    <button class="publish-button">Publish</button>
+                    <button class="draft-button">Save as Draft</button>
+                </section>
+
+                <section class="coverage-card">
+                    <h2>Coverage Details</h2>
+                    <div class="short-rule"></div>
+
+                    <ul class="stats">
+                        <li><span>Мэдээлэл бүхий сувгууд:</span><strong>16</strong></li>
+                        <li><span>АН намын:</span><strong>3</strong></li>
+                        <li><span>МАН намын:</span><strong>7</strong></li>
+                        <li><span>ХН намын:</span><strong>1</strong></li>
+                        <li><span>Төвийг сахисан:</span><strong>5</strong></li>
+                        <li><span>Ерөнхий ил тод:</span><strong>16</strong></li>
+                    </ul>
+
+                    <div class="signal-chart" aria-label="Coverage distribution">
+                        <div class="chart-head">
+                            <span>АН</span>
+                            <span>МАН</span>
+                            <span>ХН</span>
+                        </div>
+                        <div class="chart-row strong-left">
+                            <span class="dot red"></span>
+                            <span class="dot pink"></span>
+                            <span></span>
+                        </div>
+                        <div class="chart-row left">
+                            <span class="dot blue"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot blue"></span>
+                        </div>
+                        <div class="chart-row left">
+                            <span class="dot red"></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="chart-row neutral">
+                            <span class="dot blue"></span>
+                            <span class="dot purple"></span>
+                            <span></span>
+                        </div>
+                        <div class="chart-row neutral light">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="chart-label">Төвийг сахисан</div>
+                        <div class="mini-dots">
+                            <span class="dot red"></span>
+                            <span class="dot pink"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="dot purple"></span>
+                            <span class="dot blue"></span>
+                        </div>
+                        <p>Энэ мэдээлэлд төвийг сахисан өнгө хамгийн өндөр байна.</p>
+                    </div>
+
+                    <label class="coverage-check">
+                        <input type="checkbox">
+                        <span>Энэ мэдээний нэгдсэн дүгнэлтийг гүйцэтгэж харагдах эсэх</span>
+                    </label>
+                </section>
+            </aside>
         </div>
-    </header>
 
-    <div class="editor-layout">
-        <!-- Main Content Area (Left) -->
-        <main class="content-area">
-            <div class="image-upload-box">
-                <img src="image-icon.png" alt="Upload Image">
-            </div>
-            
-            <h1 class="editable-title" contenteditable="true">Гарчиг ✎</h1>
-            
-            <div class="author-info">
-                <img src="https://via.placeholder.com/30" class="author-thumb">
-                <p>By: Gloria Borger, Newsletter.mn <br> 
-                   <small>2024.09.22 | 1,272,921 read | 12min read</small>
-                </p>
-            </div>
-
-            <hr>
-
-            <div class="text-editor" contenteditable="true">
-                Эндээс бичиж эхлэнэ үү...
-            </div>
-        </main>
-
-        <!-- Sidebar Area (Right) -->
-        <aside class="sidebar">
-            <!-- Publishing Controls -->
-            <section class="sidebar-box active-border">
-                <h3>Status & Visibility</h3>
-                <div class="row">
-                    <span>Visibility</span>
-                    <button class="dropdown">Public</button>
-                </div>
-                
-                <h3>Categories</h3>
-                <div class="category-grid">
-                    <button>Category 1</button>
-                    <button>Category 2</button>
-                    <button>Category 3</button>
-                    <button>Category 4</button>
-                    <!-- Add more as needed -->
-                </div>
-
-                <div class="sources-input">
-                    <h3>Sources</h3>
-                    <textarea placeholder="Upload sources..."></textarea>
-                </div>
-
-                <button class="btn-publish">Publish</button>
-                <button class="btn-draft">Save as Draft</button>
-            </section>
-
-            <!-- Coverage Stats -->
-            <section class="sidebar-box">
-                <h3>Coverage Details</h3>
-                <ul class="stats-list">
-                    <li>Мэдээлэл бүхий сувгууд: <span>16</span></li>
-                    <li>АН талтай: <span>3</span></li>
-                    <li>МАН талтай: <span>7</span></li>
-                </ul>
-            </section>
-        </aside>
+        <footer class="site-footer">
+            <div class="footer-grid"></div>
+        </footer>
     </div>
-
+    <script type="module" src="editor.js"></script>
 </body>
 </html>
