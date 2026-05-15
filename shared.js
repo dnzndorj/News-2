@@ -26,4 +26,16 @@ export function renderFooter(sections) {
 export function renderSharedLayout(siteData) {
     renderNavigation(siteData.navigation);
     renderFooter(siteData.footer);
+
+    document.querySelectorAll(".site-footer").forEach((footer) => {
+        let copyright = footer.querySelector(".copyright");
+
+        if (!copyright) {
+            copyright = document.createElement("p");
+            copyright.className = "copyright";
+            footer.append(copyright);
+        }
+
+        copyright.innerHTML = siteData.copyright;
+    });
 }

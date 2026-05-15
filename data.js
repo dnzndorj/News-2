@@ -1,5 +1,6 @@
 export const siteData = {
     navigation: ["Олон-улс", "Улс төр", "Бизнес", "Нийгэм", "Бусад"],
+    copyright: "© 2026 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.<br>CNN Sans ™ & © 2026 Cable News Network.",
     footer: [
         {
             title: "Newsletter.mn",
@@ -65,8 +66,8 @@ const baseNews = [
 export const profileData = {
     publisher: {
         name: "Danzandorj Bat-Uul",
-        email: "natalia@gmail.com",
-        phone: "9999 - 0000",
+        email: "danzandorj@gmail.com",
+        phone: "88714228",
         photo: "https://picsum.photos/seed/danzandorj-profile/76/76",
         verified: true,
         authorMode: true

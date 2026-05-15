@@ -797,9 +797,10 @@ button {
 }
 
 .publisher-header {
+    width: max-content;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     margin: 2px 0 10px;
 }
 
