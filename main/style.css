@@ -20,11 +20,20 @@ header {
     background-color: #f5f6f8;
 }
 
-.logo {
-    color: #8aff33;
-    font-weight: 700;
+.logo, .logo:visited, .logo:hover, .logo:active {
+    text-decoration: none;
+    background-image: linear-gradient(to right, #a8ff78, #a8ff78);
+    background-repeat: no-repeat;
+    background-size: 100% 0.9em;
+    background-position: 0 80%;
+    padding: 5px 20px;
+    border-radius: 0px;
     font-size: 24px;
     font-style: italic;
+    font-weight: 700;
+    color:black;
+    display: inline;
+    transform: skewX(-10deg);
 }
 
 nav a {
@@ -80,12 +89,16 @@ main {
 }
 
 .highlight {
-    background-color: #a8ff78;
+
+    background-image: linear-gradient(to right, #a8ff78, #a8ff78);
+    background-repeat: no-repeat;
+    background-size: 100% 0.9em;
+    background-position: 0 80%;
     padding: 5px 20px;
-    border-radius: 10px;
+    border-radius: 0px;
     font-style: italic;
     font-weight: 700;
-    display: inline-block;
+    display: inline;
     transform: skewX(-10deg);
 }
 
@@ -114,12 +127,14 @@ main {
 /* Article Cards */
 .card {
     background: white;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
     position: relative;
+    color: inherit;
+    text-decoration: none;
 }
 
 .card img {

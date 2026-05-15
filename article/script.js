@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const cardImagePath = "../main/article.jpg";
+
     // Fetch similar news data from JSON to populate the bottom section
     fetch('data.json')
         .then(response => response.json())
@@ -8,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const card = document.createElement('div');
                 card.className = 'card';
                 card.innerHTML = `
-                    <img src="${article.image}" alt="News Image">
+                    <img src="${cardImagePath}" alt="News Image">
                     <div class="card-content">
                         <h3>${article.title}</h3>
                         <p class="card-meta">${article.date} • Author: ${article.author}</p>
