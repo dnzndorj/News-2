@@ -1,4 +1,3 @@
-// Function to create HTML for a single article card
 function createCardHTML(article, isLarge = false, link = "") {
     let cardClass = isLarge ? "card large-card" : "card";
     let tagName = link ? "a" : "div";
@@ -7,7 +6,7 @@ function createCardHTML(article, isLarge = false, link = "") {
     
     return `
         <${tagName} class="${cardClass}"${linkAttribute}>
-            <div class="bookmark-icon">🔖</div>
+            <div class="bookmark-icon">Save</div>
             <img src="${imagePath}" alt="News Image">
             <div class="card-content">
                 <div>
@@ -23,32 +22,30 @@ function createCardHTML(article, isLarge = false, link = "") {
         </${tagName}>
     `;
 }
-
-// Fetch data and populate the page
 fetch('data.json')
     .then(response => response.json())
     .then(data => {
-        // --- 1. Today's News (1 small, 1 large, 1 small) ---
+        //Today's News
         const todayContainer = document.getElementById('today-news-container');
         todayContainer.innerHTML = 
             createCardHTML(data[0], false, '../article/article.html') + 
             createCardHTML(data[1], true) + 
             createCardHTML(data[2]);
 
-        // --- 2. Featured News ---
+        //Featured News
         const featuredTop = document.getElementById('featured-top-container');
         featuredTop.innerHTML = 
             createCardHTML(data[3], true) + 
-            createCardHTML(data[0], true); // Re-using Trump card as large
+            createCardHTML(data[0], true);
 
         const featuredBottom = document.getElementById('featured-bottom-container');
         featuredBottom.innerHTML = 
             createCardHTML(data[4]) + 
             createCardHTML(data[2]) + 
             createCardHTML(data[5]) + 
-            createCardHTML(data[1]); // Re-using Lebanon card as small
+            createCardHTML(data[1]);
 
-        // --- 3. Latest News (Same layout logic as Featured) ---
+        //Latest News
         const latestTop = document.getElementById('latest-top-container');
         latestTop.innerHTML = 
             createCardHTML(data[3], true) + 

@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newsletter.mn</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Font: Montserrat Alternates -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet">
 </head>
-<body>
 
-    <!-- Header Navigation -->
+
+<body>
     <header>
         <a class="logo" href="../main/index.html">Newsletter.mn</a>
         <nav>
@@ -23,7 +22,7 @@
         <div class="header-right">
             <div class="search-bar">
                 <input type="text" placeholder="Хайх...">
-                <button>🔍</button>
+                <button>Search</button>
             </div>
             <div class="profile-pic">
                 <img src="avatar.png" alt="Profile" onclick="window.location.href='../profile.html'">
@@ -32,41 +31,39 @@
     </header>
 
     <main>
-        <!-- Section 1: Today's News -->
+        <!--todays News -->
         <section class="news-section">
             <h2 class="section-title"><span class="highlight">Өнөөдрийн мэдээ</span></h2>
             <div class="grid-today" id="today-news-container">
-                <!-- JS will populate cards here -->
+                
             </div>
         </section>
 
-        <!-- Section 2: Featured News -->
+        <!--featured -->
         <section class="news-section">
             <h2 class="section-title"><span class="highlight">Онцлох мэдээ</span></h2>
             <div class="grid-featured-top" id="featured-top-container"></div>
             <div class="grid-4-cols" id="featured-bottom-container"></div>
         </section>
 
-        <!-- Section 3: Latest News -->
+        <!--news News -->
         <section class="news-section">
             <h2 class="section-title"><span class="highlight">Шинэхэн мэдээ</span></h2>
             <div class="grid-featured-top" id="latest-top-container"></div>
             <div class="grid-4-cols" id="latest-bottom-container"></div>
         </section>
 
-        <!-- Section 4: Saved News -->
+        <!--saved News -->
         <section class="news-section">
             <h2 class="section-title"><span class="highlight">Хадгалсан мэдээ</span></h2>
             <div class="grid-4-cols" id="saved-news-container"></div>
         </section>
-
-        <!-- Scroll to Top -->
+        
         <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
             <h2><span class="">︽<br>Хамгийн дээд хэсэг рүү буцах</span></h2>
         </div>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-columns">
             <div class="col">
