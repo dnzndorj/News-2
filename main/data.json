@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Suspect described Trump 'assassination attempt' in pre-written note",
+    "image": "article.jpg",
+    "date": "2024.09.24",
+    "author": "Marty Hann",
+    "size": "small",
+    "bias": {"left": "30%", "center": "20%", "right": "50%"}
+  },
+  {
+    "id": 2,
+    "title": "Israel strikes dozens more sites in southern Lebanon as thousands flee homes",
+    "image": "article.jpg",
+    "date": "2024.09.24",
+    "author": "Marty Hann",
+    "size": "large",
+    "bias": {"left": "40%", "center": "40%", "right": "20%"}
+  },
+  {
+    "id": 3,
+    "title": "China unveils raft of measures to boost economy",
+    "image": "article.jpg",
+    "date": "2024.09.24",
+    "author": "Marty Hann",
+    "size": "small",
+    "bias": {"left": "25%", "center": "50%", "right": "25%"}
+  },
+  {
+    "id": 4,
+    "title": "Elon Musk praises Italy PM Giorgia Meloni: 'Authentic, honest, truthful'",
+    "image": "article.jpg",
+    "date": "2024.09.22",
+    "author": "Doria Borger",
+    "size": "large",
+    "bias": {"left": "15%", "center": "10%", "right": "75%"}
+  },
+  {
+    "id": 5,
+    "title": "Goodbye Louis Vuitton. China's Gen Z leans into 'dupe economy' as growth prospects stall",
+    "image": "article.jpg",
+    "date": "2024.09.24",
+    "author": "Marty Hann",
+    "size": "small",
+    "bias": {"left": "40%", "center": "30%", "right": "30%"}
+  },
+  {
+    "id": 6,
+    "title": "Divorce is on the rise in China. For some, that means big business",
+    "image": "article.jpg",
+    "date": "2024.09.24",
+    "author": "Marty Hann",
+    "size": "small",
+    "bias": {"left": "33%", "center": "33%", "right": "34%"}
+  }
+]
